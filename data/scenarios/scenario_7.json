@@ -1,0 +1,104 @@
+{
+  "name": "07 \u00b7 Invoice dispute \u2192 payment delay \u2192 recovery",
+  "asset_id": "A1006",
+  "asset_seed": {
+    "po_id": "PO10006",
+    "product_name": "smartphones",
+    "quantity": 7831,
+    "buyer_id": "buyer_zeta",
+    "supplier_id": "supplier_08",
+    "lender_id": "lender_atlas",
+    "agreed_price": 1059.32,
+    "buyer_risk_score_override": 0.0759,
+    "buyer_payment_history_override": 0.9358,
+    "supplier_reliability_override": 0.8876
+  },
+  "events": [
+    {
+      "type": "PO_CREATED",
+      "source": "erp",
+      "timestamp": 1787917956.8830268,
+      "payload": {}
+    },
+    {
+      "type": "MATERIAL_RECEIVED",
+      "source": "erp",
+      "timestamp": 1787917957.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_STARTED",
+      "source": "production_system",
+      "timestamp": 1787917958.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_PROGRESS",
+      "source": "production_system",
+      "timestamp": 1787917959.8830268,
+      "payload": {
+        "production_pct": 100
+      }
+    },
+    {
+      "type": "PRODUCTION_COMPLETED",
+      "source": "production_system",
+      "timestamp": 1787917960.8830268,
+      "payload": {}
+    },
+    {
+      "type": "SHIPMENT_CREATED",
+      "source": "logistics",
+      "timestamp": 1787917961.8830268,
+      "payload": {}
+    },
+    {
+      "type": "WAREHOUSE_RECEIVED",
+      "source": "warehouse",
+      "timestamp": 1787917962.8830268,
+      "payload": {}
+    },
+    {
+      "type": "DELIVERY_CONFIRMED",
+      "source": "logistics",
+      "timestamp": 1787917963.8830268,
+      "payload": {}
+    },
+    {
+      "type": "INVOICE_ISSUED",
+      "source": "invoice_system",
+      "timestamp": 1787917964.8830268,
+      "payload": {
+        "invoice_id": "INV-DEMO"
+      }
+    },
+    {
+      "type": "INVOICE_DISPUTED",
+      "source": "buyer",
+      "timestamp": 1787917965.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PAYMENT_DELAYED",
+      "source": "financial_system",
+      "timestamp": 1787917966.8830268,
+      "payload": {
+        "delay_days": 21
+      }
+    },
+    {
+      "type": "BUYER_RISK_CHANGED",
+      "source": "buyer_credit_bureau",
+      "timestamp": 1787917967.8830268,
+      "payload": {
+        "buyer_risk_score": 0.18
+      }
+    },
+    {
+      "type": "PAYMENT_RECEIVED",
+      "source": "financial_system",
+      "timestamp": 1787917968.8830268,
+      "payload": {}
+    }
+  ]
+}

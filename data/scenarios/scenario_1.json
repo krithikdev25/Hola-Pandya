@@ -1,0 +1,82 @@
+{
+  "name": "01 \u00b7 Clean lifecycle / auto settlement",
+  "asset_id": "A1000",
+  "asset_seed": {
+    "po_id": "PO10000",
+    "product_name": "medical devices",
+    "quantity": 18524,
+    "buyer_id": "buyer_beta",
+    "supplier_id": "supplier_01",
+    "lender_id": "lender_north",
+    "agreed_price": 298.92,
+    "buyer_risk_score_override": 0.4131,
+    "buyer_payment_history_override": 0.9516,
+    "supplier_reliability_override": 0.896
+  },
+  "events": [
+    {
+      "type": "PO_CREATED",
+      "source": "erp",
+      "timestamp": 1787917956.8830268,
+      "payload": {}
+    },
+    {
+      "type": "MATERIAL_RECEIVED",
+      "source": "erp",
+      "timestamp": 1787917957.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_STARTED",
+      "source": "production_system",
+      "timestamp": 1787917958.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_PROGRESS",
+      "source": "production_system",
+      "timestamp": 1787917959.8830268,
+      "payload": {
+        "production_pct": 100
+      }
+    },
+    {
+      "type": "PRODUCTION_COMPLETED",
+      "source": "production_system",
+      "timestamp": 1787917960.8830268,
+      "payload": {}
+    },
+    {
+      "type": "SHIPMENT_CREATED",
+      "source": "logistics",
+      "timestamp": 1787917961.8830268,
+      "payload": {}
+    },
+    {
+      "type": "WAREHOUSE_RECEIVED",
+      "source": "warehouse",
+      "timestamp": 1787917962.8830268,
+      "payload": {}
+    },
+    {
+      "type": "DELIVERY_CONFIRMED",
+      "source": "logistics",
+      "timestamp": 1787917963.8830268,
+      "payload": {}
+    },
+    {
+      "type": "INVOICE_ISSUED",
+      "source": "invoice_system",
+      "timestamp": 1787917964.8830268,
+      "payload": {
+        "invoice_id": "INV-DEMO"
+      }
+    },
+    {
+      "type": "PAYMENT_RECEIVED",
+      "source": "financial_system",
+      "timestamp": 1787917965.8830268,
+      "payload": {}
+    }
+  ]
+}

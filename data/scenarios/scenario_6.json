@@ -1,0 +1,60 @@
+{
+  "name": "06 \u00b7 Supplier reliability collapse",
+  "asset_id": "A1005",
+  "asset_seed": {
+    "po_id": "PO10005",
+    "product_name": "laptop batteries",
+    "quantity": 30235,
+    "buyer_id": "buyer_epsilon",
+    "supplier_id": "supplier_07",
+    "lender_id": "lender_prime",
+    "agreed_price": 1146.43,
+    "buyer_risk_score_override": 0.1532,
+    "buyer_payment_history_override": 0.6813,
+    "supplier_reliability_override": 0.7006
+  },
+  "events": [
+    {
+      "type": "PO_CREATED",
+      "source": "erp",
+      "timestamp": 1787917956.8830268,
+      "payload": {}
+    },
+    {
+      "type": "MATERIAL_RECEIVED",
+      "source": "erp",
+      "timestamp": 1787917957.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_STARTED",
+      "source": "production_system",
+      "timestamp": 1787917958.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_PROGRESS",
+      "source": "production_system",
+      "timestamp": 1787917959.8830268,
+      "payload": {
+        "production_pct": 55
+      }
+    },
+    {
+      "type": "SUPPLIER_RISK_CHANGED",
+      "source": "supplier_monitor",
+      "timestamp": 1787917960.8830268,
+      "payload": {
+        "supplier_reliability": 0.08
+      }
+    },
+    {
+      "type": "PRODUCTION_DELAYED",
+      "source": "production_system",
+      "timestamp": 1787917961.8830268,
+      "payload": {
+        "delay_days": 16
+      }
+    }
+  ]
+}

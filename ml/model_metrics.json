@@ -1,0 +1,100 @@
+{
+  "model": "logistic_regression",
+  "dataset_rows": 100000,
+  "n_train": 60000,
+  "n_validation": 20000,
+  "n_test": 20000,
+  "test_auc": 0.757432491305781,
+  "test_average_precision": 0.5903630722059438,
+  "test_brier_score": 0.17014337692174109,
+  "test_accuracy_at_learned_threshold": 0.5182,
+  "precision_risky": 0.3726019807465891,
+  "recall_risky": 0.9031391640087292,
+  "f1_risky": 0.5275544224357718,
+  "confusion_matrix": [
+    [
+      4984,
+      9059
+    ],
+    [
+      577,
+      5380
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.8962416831505124,
+      "recall": 0.3549099195328633,
+      "f1-score": 0.5084676596612936,
+      "support": 14043.0
+    },
+    "1": {
+      "precision": 0.3726019807465891,
+      "recall": 0.9031391640087292,
+      "f1-score": 0.5275544224357718,
+      "support": 5957.0
+    },
+    "accuracy": 0.5182,
+    "macro avg": {
+      "precision": 0.6344218319485508,
+      "recall": 0.6290245417707963,
+      "f1-score": 0.5180110410485327,
+      "support": 20000.0
+    },
+    "weighted avg": {
+      "precision": 0.7402755977895039,
+      "recall": 0.5182,
+      "f1-score": 0.5141526519536719,
+      "support": 20000.0
+    }
+  },
+  "operating_threshold": {
+    "threshold": 0.155,
+    "expected_cost": 12064.0,
+    "false_negatives": 621,
+    "false_positives": 8959
+  },
+  "risk_band_thresholds": {
+    "low_cut": 0.155,
+    "high_cut": 0.595127576296246
+  },
+  "threshold_method": "validation expected-cost minimization",
+  "false_negative_cost": 5.0,
+  "false_positive_cost": 1.0,
+  "coefficients": {
+    "buyer_risk_score": 0.5618407683443837,
+    "buyer_payment_history": -0.22926046045054405,
+    "supplier_reliability": -0.29031334224532973,
+    "production_delay_days": 0.2277369938144333,
+    "shipment_delay_days": 0.1386534580736247,
+    "payment_delay_days": 0.21366721904835234,
+    "inventory_age_days": 0.39243238609201375,
+    "deterioration": 0.2848967233995195,
+    "invoice_dispute_flag": 0.21515006957789384,
+    "duplicate_financing_flag": 0.3440896463447268,
+    "source_confidence": -0.13651833792233606,
+    "stage_progress": -0.25624031886037724,
+    "advance_rate_requested": 0.2596941080073303,
+    "financing_utilization": 0.21115976412956922,
+    "demand_volatility": 0.17769922612593123
+  },
+  "intercept": -1.040829547026779,
+  "feature_order": [
+    "buyer_risk_score",
+    "buyer_payment_history",
+    "supplier_reliability",
+    "production_delay_days",
+    "shipment_delay_days",
+    "payment_delay_days",
+    "inventory_age_days",
+    "deterioration",
+    "invoice_dispute_flag",
+    "duplicate_financing_flag",
+    "source_confidence",
+    "stage_progress",
+    "advance_rate_requested",
+    "financing_utilization",
+    "demand_volatility"
+  ],
+  "formula": "p(adverse)=1/(1+exp(-(intercept + sum(coef_i * standardized_feature_i))))"
+}

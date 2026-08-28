@@ -1,0 +1,70 @@
+{
+  "name": "09 \u00b7 Logistics delay + location verification failure",
+  "asset_id": "A1008",
+  "asset_seed": {
+    "po_id": "PO10008",
+    "product_name": "laptop batteries",
+    "quantity": 6681,
+    "buyer_id": "buyer_theta",
+    "supplier_id": "supplier_07",
+    "lender_id": "lender_prime",
+    "agreed_price": 804.42,
+    "buyer_risk_score_override": 0.1795,
+    "buyer_payment_history_override": 0.7898,
+    "supplier_reliability_override": 0.6977
+  },
+  "events": [
+    {
+      "type": "PO_CREATED",
+      "source": "erp",
+      "timestamp": 1787917956.8830268,
+      "payload": {}
+    },
+    {
+      "type": "MATERIAL_RECEIVED",
+      "source": "erp",
+      "timestamp": 1787917957.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_STARTED",
+      "source": "production_system",
+      "timestamp": 1787917958.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_COMPLETED",
+      "source": "production_system",
+      "timestamp": 1787917959.8830268,
+      "payload": {}
+    },
+    {
+      "type": "SHIPMENT_CREATED",
+      "source": "logistics",
+      "timestamp": 1787917960.8830268,
+      "payload": {}
+    },
+    {
+      "type": "SHIPMENT_DELAYED",
+      "source": "logistics",
+      "timestamp": 1787917961.8830268,
+      "payload": {
+        "delay_days": 11
+      }
+    },
+    {
+      "type": "LOCATION_MISMATCH",
+      "source": "warehouse_iot",
+      "timestamp": 1787917962.8830268,
+      "payload": {}
+    },
+    {
+      "type": "INVENTORY_AGING",
+      "source": "warehouse_iot",
+      "timestamp": 1787917963.8830268,
+      "payload": {
+        "inventory_age_days": 63
+      }
+    }
+  ]
+}

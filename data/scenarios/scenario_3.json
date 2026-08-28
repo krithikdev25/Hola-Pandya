@@ -1,0 +1,58 @@
+{
+  "name": "03 \u00b7 ERP vs IoT conflict / reconciliation",
+  "asset_id": "A1002",
+  "asset_seed": {
+    "po_id": "PO10002",
+    "product_name": "laptop batteries",
+    "quantity": 19465,
+    "buyer_id": "buyer_alpha",
+    "supplier_id": "supplier_11",
+    "lender_id": "lender_prime",
+    "agreed_price": 1032.17,
+    "buyer_risk_score_override": 0.3519,
+    "buyer_payment_history_override": 0.7558,
+    "supplier_reliability_override": 0.8198
+  },
+  "events": [
+    {
+      "type": "PO_CREATED",
+      "source": "erp",
+      "timestamp": 1787917956.8830268,
+      "payload": {}
+    },
+    {
+      "type": "MATERIAL_RECEIVED",
+      "source": "erp",
+      "timestamp": 1787917957.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_STARTED",
+      "source": "production_system",
+      "timestamp": 1787917958.8830268,
+      "payload": {}
+    },
+    {
+      "type": "PRODUCTION_PROGRESS",
+      "source": "erp",
+      "timestamp": 1787917959.8830268,
+      "payload": {
+        "production_pct": 96
+      }
+    },
+    {
+      "type": "PRODUCTION_PROGRESS",
+      "source": "warehouse_iot",
+      "timestamp": 1787917960.083027,
+      "payload": {
+        "production_pct": 61
+      }
+    },
+    {
+      "type": "LOCATION_MISMATCH",
+      "source": "warehouse_iot",
+      "timestamp": 1787917960.1830268,
+      "payload": {}
+    }
+  ]
+}
